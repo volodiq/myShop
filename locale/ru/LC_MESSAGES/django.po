@@ -8,21 +8,164 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 17:35+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-04-03 19:00+0300\n"
+"PO-Revision-Date: 2024-04-03 19:00+0300\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: myShop/settings.py:105
-msgid "English"
-msgstr ""
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: myShop/settings.py:106
+#: cart/forms.py:11
+msgid "Количество"
+msgstr "Количество"
+
+#: coupons/forms.py:8
+msgid "Код купона"
+msgstr "Код купона"
+
+#: myShop/settings.py:107
+msgid "English"
+msgstr "Английский"
+
+#: myShop/settings.py:107
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
+
+#: myShop/urls.py:12
+msgid "cart"
+msgstr "корзина"
+
+#: myShop/urls.py:13
+msgid "orders/"
+msgstr "заказы/"
+
+#: myShop/urls.py:14
+msgid "payment/"
+msgstr "платежи/"
+
+#: myShop/urls.py:15
+msgid "coupons/"
+msgstr "купоны/"
+
+#: orders/models.py:15
+msgid "Имя"
+msgstr "Имя"
+
+#: orders/models.py:16
+msgid "Фамилия"
+msgstr "Фамилия"
+
+#: orders/models.py:17
+msgid "e-mail"
+msgstr "e-mail"
+
+#: orders/models.py:18
+msgid "Адрес"
+msgstr "Адрес"
+
+#: orders/models.py:19
+msgid "Почтовый индекс"
+msgstr "Почтовый индекс"
+
+#: orders/models.py:20
+msgid "Город"
+msgstr "Город"
+
+#: orders/templates/orders/order/create.html:5
+msgid "Заказ"
+msgstr "Заказ"
+
+#: orders/templates/orders/order/create.html:7
+msgid "Ваш заказ"
+msgstr "Ваш заказ"
+
+#: orders/templates/orders/order/create.html:17
+msgid "скидка"
+msgstr "скидка"
+
+#: orders/templates/orders/order/create.html:22
+msgid "Итого"
+msgstr "Итого"
+
+#: orders/templates/orders/order/create.html:28
+msgid "Заказать"
+msgstr "Заказать"
+
+#: orders/templates/orders/order/created.html:4
+msgid "Заказ создан"
+msgstr "Заказ создан"
+
+#: orders/templates/orders/order/created.html:7
+msgid "Благодарим вас за заказ"
+msgstr "Благодарим вас за заказ"
+
+#: orders/templates/orders/order/created.html:9
+msgid "Ваш заказ был успешно создан, номер заказа"
+msgstr "Ваш заказ был успешно создан, номер заказа"
+
+#: orders/urls.py:8
+msgid "create"
+msgstr "создать"
+
+#: payment/urls.py:8
+msgid "process/"
+msgstr "процесс/"
+
+#: payment/urls.py:9
+msgid "success/"
+msgstr "успех/"
+
+#: payment/urls.py:10
+msgid "canceled/"
+msgstr "отмена/"
+
+#: shop/templates/shop/base.html:23
+msgid "Language"
+msgstr "Язык"
+
+#: shop/templates/shop/base.html:41
+msgid "В корзине"
+msgstr "В корзине"
+
+#: shop/templates/shop/base.html:42
+#, python-format
+msgid ""
+"\n"
+"                                %(items)s item, ₽ %(total)s\n"
+"                                "
+msgid_plural ""
+"\n"
+"                                %(items)s items, ₽ %(total)s\n"
+"                            "
+msgstr[0] ""
+"\n"
+"%(items)s товар, ₽ %(total)s"
+msgstr[1] ""
+"\n"
+" %(items)s товара, ₽ %(total)s"
+msgstr[2] ""
+"\n"
+" %(items)s товаров, ₽ %(total)s"
+msgstr[3] ""
+"\n"
+" %(items)s товаров3, ₽ %(total)s"
+
+#: shop/templates/shop/product/detail.html:19
+msgid "Добавить в корзину"
+msgstr "Добавить в корзину"
+
+#: shop/templates/shop/product/detail.html:25
+msgid "Также с этим покупают"
+msgstr "Также с этим покупают"
+
+#: shop/templates/shop/product/list.html:14
+msgid "Категории"
+msgstr "Категории"
+
+#: shop/templates/shop/product/list.html:17
+msgid "Все"
+msgstr "Все"

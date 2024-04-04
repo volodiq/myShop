@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% block title %}
+    {% trans 'Заказ создан' %}
+{% endblock %}
+{% block content %}
+    <h1>{% trans 'Благодарим вас за заказ' %}</h1>
+    <p>
+        {% trans 'Ваш заказ был успешно создан, номер заказа' %} <strong>{{ order.id }}</strong>.
+    </p>
+{% endblock %}

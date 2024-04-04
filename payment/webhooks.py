@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from orders.models import Order
+from payment.tasks import post_payment_mail
 
 
 @csrf_exempt
@@ -14,7 +15,9 @@ def stripe_webhook(request):
     event = None
 
     try:
-        event = stripe.Webhook.construct_event(payload, sig_header, settings.STRIPE_WEBHOOK_SECRET)
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, settings.STRIPE_WEBHOOK_SECRET
+        )
     except ValueError as e:
         # Недопустимая полезная нагрузка
         return HttpResponse(status=400)
@@ -31,6 +34,9 @@ def stripe_webhook(request):
                 return HttpResponse(status=404)
             # Помечаем заказ как оплаченный
             order.paid = True
+            order.stripe_id = session.payment_intent
             order.save()
+            # Отправка письма клиенту
+            post_payment_mail(order.id)
 
     return HttpResponse(status=200)
